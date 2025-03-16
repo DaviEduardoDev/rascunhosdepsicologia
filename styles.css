@@ -26,11 +26,20 @@ body {
 header {
     background-color: #0a192c;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    height: 80px;
-    width: 80px;
+    height: 60px; /* Ajuste o tamanho conforme necessário */
+    width: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -39,6 +48,7 @@ header {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
 .nav-links a {
@@ -59,7 +69,6 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 /* Hero Section */
 .hero {
     background-color: #0a192c;
@@ -85,6 +94,7 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
@@ -213,58 +223,6 @@ header {
     line-height: 1.6;
 }
 
-/* Articles Page */
-.articles-page {
-    padding: 4rem 0;
-    background-color: #f4f4f4;
-}
-
-.articles-page h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #0a192c;
-}
-
-.article-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.article-list article {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.article-list h2 {
-    margin-bottom: 1rem;
-    color: #0a192c;
-}
-
-.article-list p {
-    text-align: justify;
-    text-justify: inter-word;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.article-list .btn {
-    display: inline-block;
-    background-color: #b1b5b9;
-    color: #0a192c;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.article-list .btn:hover {
-    background-color: #0a192c;
-    color: #ffffff;
-}
-
 /* Footer */
 footer {
     background-color: #0a192c;
@@ -290,8 +248,12 @@ footer {
     color: #ffffff;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -299,21 +261,24 @@ footer {
         background-color: #0a192c;
         padding: 1rem;
         position: absolute;
-        top: 60px;
+        top: 80px; /* Ajuste conforme a altura do header */
         left: 0;
         width: 100%;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-links.active {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .menu-toggle {
         display: block;
-    }
-
-    .about-me-content {
-        flex-direction: column;
-        text-align: center;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }
