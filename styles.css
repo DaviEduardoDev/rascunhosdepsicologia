@@ -97,6 +97,11 @@ header {
     margin-bottom: 1rem;
 }
 
+.about p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 /* About Me Section */
 .about-me {
     padding: 2rem 0;
@@ -130,6 +135,8 @@ header {
 }
 
 .about-me-text p {
+    text-align: justify;
+    text-justify: inter-word;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -165,6 +172,8 @@ header {
 }
 
 .article-list p {
+    text-align: justify;
+    text-justify: inter-word;
     margin-bottom: 1.5rem;
     color: #333;
 }
