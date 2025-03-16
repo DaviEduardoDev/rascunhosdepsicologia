@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -85,6 +89,74 @@ header {
 
 .btn:hover {
     background-color: #ffffff;
+}
+
+/* Seção de Resumos */
+.resumos {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+}
+
+.resumos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0a192c;
+}
+
+.resumos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.resumo-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resumo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.resumo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.resumo-content {
+    padding: 1.5rem;
+}
+
+.resumo-content h3 {
+    margin-bottom: 1rem;
+    color: #0a192c;
+}
+
+.resumo-content p {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: justify;
+}
+
+.resumo-content .btn {
+    display: inline-block;
+    background-color: #b1b5b9;
+    color: #0a192c;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resumo-content .btn:hover {
+    background-color: #0a192c;
+    color: #ffffff;
 }
 
 /* About Section */
