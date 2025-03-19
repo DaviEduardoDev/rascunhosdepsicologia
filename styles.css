@@ -38,7 +38,7 @@ header {
 }
 
 .logo {
-    height: 60px; /* Ajuste o tamanho conforme necessário */
+    height: 60px;
     width: 60px;
     border-radius: 50%;
     object-fit: cover;
@@ -48,7 +48,7 @@ header {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center;
 }
 
 .nav-links a {
@@ -69,6 +69,7 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 /* Hero Section */
 .hero {
     background-color: #0a192c;
@@ -223,6 +224,54 @@ header {
     line-height: 1.6;
 }
 
+/* Página de Resumo Detalhado */
+.resumo-detalhes {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.resumo-detalhes .container {
+    max-width: 800px;
+}
+
+.resumo-detalhes h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0a192c;
+    text-align: center;
+}
+
+.resumo-detalhes .resumo-imagem {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.resumo-detalhes p {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.resumo-detalhes h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0a192c;
+}
+
+.resumo-detalhes ul {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.resumo-detalhes ul li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
 /* Footer */
 footer {
     background-color: #0a192c;
@@ -248,6 +297,7 @@ footer {
     color: #ffffff;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -261,7 +311,7 @@ footer {
         background-color: #0a192c;
         padding: 1rem;
         position: absolute;
-        top: 80px; /* Ajuste conforme a altura do header */
+        top: 80px;
         left: 0;
         width: 100%;
         opacity: 0;
@@ -280,5 +330,18 @@ footer {
         position: absolute;
         top: 1rem;
         right: 1rem;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resumo-detalhes h1 {
+        font-size: 2rem;
+    }
+
+    .resumo-detalhes .resumo-imagem {
+        height: 200px;
     }
 }
