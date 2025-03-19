@@ -225,6 +225,7 @@ header {
 }
 
 /* Página de Resumo Detalhado */
+/* Página de Resumo Detalhado */
 .resumo-detalhes {
     padding: 4rem 0;
     background-color: #ffffff;
@@ -337,6 +338,17 @@ footer {
         text-align: center;
     }
 
+    .resumo-detalhes h1 {
+        font-size: 2rem;
+    }
+
+    .resumo-detalhes .resumo-imagem {
+        height: 200px;
+    }
+}
+
+/* Responsividade para a Página de Resumo */
+@media (max-width: 768px) {
     .resumo-detalhes h1 {
         font-size: 2rem;
     }
